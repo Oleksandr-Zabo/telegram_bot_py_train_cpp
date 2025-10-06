@@ -315,7 +315,7 @@ def main():
             time.sleep(1)
     
     except KeyboardInterrupt:
-        print("\\n🛑 Бот зупинено!")
+        print("\n🛑 Бот зупинено!")
     except Exception as e:
         print(f"❌ Помилка: {e}")
 
