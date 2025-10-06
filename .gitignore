@@ -1,0 +1,37 @@
+# Змінні середовища та конфіденційні дані
+.env
+.env.local
+.env.production
+.env.staging
+
+# Python кеш
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Віртуальне середовище
+.venv/
+venv/
+env/
+
+# IDE файли
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Логи
+*.log
+logs/
+
+# Тимчасові файли
+*.tmp
+*.temp
+
+# OS файли
+.DS_Store
+Thumbs.db
+
+# Backup файли
+*.bak
+*.backup
