@@ -1,98 +1,107 @@
 # 🤖 C/C++ Trainer Telegram Bot
 
-Навчальний телеграм-бот для вивчення основ програмування на C та C++.
+Educational Telegram bot for learning C and C++ programming fundamentals.
 
-## 📋 Опис
+## 📋 Description
 
-C/C++ Trainer — це інтерактивний бот, який допомагає вивчати основи програмування на C і C++. Бот містить:
+C/C++ Trainer is an interactive bot that helps learn the basics of C and C++ programming. The bot includes:
 
-- 📚 **Теоретичні матеріали** - поділені на 7 основних тем
-- 📝 **Інтерактивне тестування** - 10 питань з випадковим вибором 5
-- 🔗 **Корисні посилання** - ресурси для самостійного навчання
+- 📚 **Theoretical materials** - divided into 3 main topics
+- 📝 **Interactive testing** - 5 questions with random selection of 3
+- 🔗 **Useful links** - resources for self-learning
 
-## 🔧 Встановлення
+## 🔧 Installation
 
-### 1. Встановлення залежностей
+### 1. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. Створення бота в Telegram
+### 2. Create a bot in Telegram
 
-1. Знайдіть @BotFather в Telegram
-2. Відправте команду `/newbot`
-3. Дайте назву вашому боту (наприклад: "C/C++ Trainer")
-4. Дайте username боту (має закінчуватися на "bot", наприклад: "cpp_trainer_bot")
-5. Скопіюйте отриманий токен
+1. Find @BotFather in Telegram
+2. Send the `/newbot` command
+3. Give your bot a name (e.g., "C/C++ Trainer")
+4. Give your bot a username (must end with "bot", e.g., "cpp_trainer_bot")
+5. Copy the received token
 
-### 3. Налаштування токена
+### 3. Token configuration
 
-1. Скопіюйте файл `.env.example` в `.env`:
+1. Copy the `.env.example` file to `.env`:
    ```bash
    cp .env.example .env
    ```
 
-2. Відкрийте файл `.env` та замініть:
+2. Open the `.env` file and replace:
    ```
    BOT_TOKEN=YOUR_BOT_TOKEN_HERE
    ```
-   на:
+   with:
    ```
-   BOT_TOKEN=ваш_токен_бота
+   BOT_TOKEN=your_bot_token
    ```
 
-**⚠️ ВАЖЛИВО:** Ніколи не додавайте файл `.env` до Git! Він вже доданий до `.gitignore`.
+**⚠️ IMPORTANT:** Never add the `.env` file to Git! It's already added to `.gitignore`.
 
-## 🚀 Запуск
+## 🚀 Running the bot
 
 ```bash
 python bot.py
 ```
 
-## 📚 Структура навчального матеріалу
+## 📚 Learning material structure
 
-### Теоретичні теми:
-1. **🔤 Основи C/C++** - історія, особливості, структура програми
-2. **📊 Змінні та типи даних** - int, float, double, char, константи
-3. **⚡ Оператори** - арифметичні, порівняння, логічні
-4. **🔄 Управляючі конструкції** - if/else, switch, цикли
-5. **🔧 Функції** - оголошення, параметри, прототипи
-6. **📋 Масиви** - одновимірні, двовимірні, робота з елементами
-7. **👉 Покажчики** - основи, арифметика, використання з функціями
+### Theoretical topics:
+1. **🔤 C/C++ Basics** - history, features, program structure
+2. **📊 Variables and data types** - int, float, double, char, constants
+3. **� Operators** - arithmetic, comparison, logical
 
-### Тестування:
-- 10 підготовлених питань
-- Випадковий вибір 5 питань для кожного тесту
-- Система оцінювання з відсотками
-- Детальні результати з рекомендаціями
+### Testing:
+- 5 prepared questions
+- Random selection of 3 questions for each test
+- Percentage scoring system
+- Detailed results with recommendations
 
-## 🎯 Функціональність
+## 🎯 Functionality
 
-- **Головне меню** з трьома основними розділами
-- **Навігація** між розділами з кнопками "Назад"
-- **Інтерактивні тести** з миттєвою перевіркою відповідей
-- **Корисні посилання** на документацію, онлайн компілятори, курси
-- **Підтримка форматування** коду та тексту
+- **Main menu** with three main sections
+- **Navigation** between sections with "Back" buttons
+- **Interactive tests** with instant answer checking
+- **Useful links** to documentation, online compilers, courses
+- **Code and text formatting** support
 
-## 🔧 Технічні деталі
+## 🔧 Technical details
 
-- **Мова програмування**: Python 3.7+
-- **Бібліотека**: python-telegram-bot 20.6
-- **Архітектура**: callback-based обробка подій
-- **Зберігання даних**: в пам'яті (context.user_data)
+- **Programming language**: Python 3.7+
+- **Library**: python-telegram-bot 20.6 / HTTP API
+- **Architecture**: callback-based event handling
+- **Data storage**: in memory (user_states dictionary)
 
-## 📝 Приклад використання
+## 📝 Usage example
 
-1. Запустіть бота командою `/start`
-2. Оберіть розділ "📚 Теорія" для вивчення матеріалу
-3. Пройдіть "📝 Тест" для перевірки знань
-4. Скористайтесь "🔗 Корисні посилання" для додаткового навчання
+1. Start the bot with the `/start` command
+2. Choose "📚 Theory" section to study materials
+3. Take a "📝 Test" to check your knowledge
+4. Use "🔗 Links" for additional learning resources
 
-## 🤝 Внесок в розробку
+## 🚀 Deployment
 
-Ви можете додати нові питання в список `TEST_QUESTIONS` або розширити теоретичні матеріали в `THEORY_TOPICS`.
+### Local development:
+```bash
+python bot.py
+```
 
-## 📄 Ліцензія
+### Deploy to Render:
+1. Push code to GitHub (token is safely hidden in `.env`)
+2. Connect repository to Render
+3. Add environment variable `BOT_TOKEN` with your token value
+4. Render will automatically install dependencies from `requirements.txt`
 
-Цей проект створений в навчальних цілях.
+## 🤝 Contributing
+
+You can add new questions to the `QUESTIONS` list or extend theoretical materials in the `THEORY` dictionary.
+
+## 📄 License
+
+This project was created for educational purposes.
