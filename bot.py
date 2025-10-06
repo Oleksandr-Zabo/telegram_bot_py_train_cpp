@@ -25,7 +25,7 @@ THEORY = {
 ```c
 #include <stdio.h>
 int main() {
-    printf("Hello, World!\\n");
+    printf("Hello, World!\n");
     return 0;
 }
 ```""",
@@ -146,7 +146,7 @@ def handle_callback(chat_id, message_id, callback_data, user_id):
     """Обробка callback запитів"""
     
     if callback_data == 'menu':
-        text = "🤖 **C/C++ Trainer**\\n\\nОберіть розділ:"
+        text = "🤖 **C/C++ Trainer**\n\nОберіть розділ:"
         edit_message(chat_id, message_id, text, get_main_keyboard())
     
     elif callback_data == 'theory':
@@ -190,7 +190,7 @@ def handle_callback(chat_id, message_id, callback_data, user_id):
                         [{'text': '➡️ Далі', 'callback_data': 'next'}]
                     ]
                 }
-                text = f"{result}\\n\\nНатисни 'Далі' для продовження"
+                text = f"{result}\n\nНатисни 'Далі' для продовження"
                 edit_message(chat_id, message_id, text, keyboard)
             else:
                 # Кінець тесту
@@ -241,7 +241,7 @@ def show_question(chat_id, message_id, user_id):
         current = state['current']
         q = state['questions'][current]
         
-        text = f"📝 **Питання {current + 1}/{len(state['questions'])}**\\n\\n❓ {q['q']}"
+        text = f"📝 **Питання {current + 1}/{len(state['questions'])}**\n\n❓ {q['q']}"
         
         keyboard = {
             'inline_keyboard': [
